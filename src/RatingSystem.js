@@ -36,7 +36,7 @@ const RatingSystem = (props) => {
         const averageRating = totalStarRating/ newSavedRatingsArry.length
         console.log(averageRating)
 
-        setAverageRating(averageRating)
+        setAverageRating(averageRating.toFixed(1))
         
         const totalNumClicks = savedRatingsArry.reduce((a, b) => a + b, 0)
         
@@ -46,7 +46,7 @@ const RatingSystem = (props) => {
         const addNewRatingToAverage = ((averageRating * totalNumClicks) + rating) / totalNumClicks
         console.log(addNewRatingToAverage)
 
-        setNewRatingToAverage(addNewRatingToAverage)
+        setNewRatingToAverage(addNewRatingToAverage.toFixed(1))
         
         
     }
